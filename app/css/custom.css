@@ -28,7 +28,7 @@ body {
 .form-container {
   width: 50%;
 }
-#addClimb {
+#addClimbForm {
   display: flex;
   flex-direction: column;
   align-items: center;

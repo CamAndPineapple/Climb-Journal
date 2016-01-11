@@ -6,6 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Climb Journal</title>
   <link rel="stylesheet" href="app/css/custom.css">
+
+  <!-- Places Autocomplete API -->
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 </head>
 
 <body>
@@ -13,11 +16,11 @@
   <!-- FORM FOR ADDING NEW CLIMB -->
   <div id="app">
     <div class="form-container">
-    <form id="addClimb" action="#">
+    <form id="addClimbForm" action="#">
             <div class="type-button-container">
-              <button class="type-button" id="lead">Lead</button>
-              <button class="type-button" id="TopRope">Top Rope</button>
-              <button class="type-button" id="Boulder">Boulder</button>
+              <button class="type-button">Lead</button>
+              <button class="type-button">Top Rope</button>
+              <button class="type-button">Boulder</button>
             </div>
             <span class="form-input"><label for="Grade">Grade: </label><input id="Grade" type="text" /></span>
             <span class="form-input"><label for="Name">Name: </label><input id="Name" type="text" /></span>
@@ -32,7 +35,7 @@
 </div>
 
   <!-- TEMPLATES -->
-<script id="climbTemplate" type="text/template">
+<script id="climbEntryTemplate" type="text/template">
     <ul>
         <li><span>Type: </span><%= Type %></li>
         <li><span>Grade: </span><%= Grade %></li>
@@ -44,6 +47,7 @@
     <button class="delete">Delete</button>
 </script>
 
+
   <!-- jQuery + Underscore + Backbone + Firebase + BackboneFire -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore.js"></script>
@@ -52,11 +56,11 @@
   <script src="https://cdn.firebase.com/libs/backbonefire/0.5.1/backbonefire.js"></script>
 
   <!-- App Javascript -->
-  <script src="app/js/models/climb.js"></script>
+  <script src="app/js/models/climbEntry.js"></script>
   <script src="app/js/collections/journal.js"></script>
-  <script src="app/js/views/climb.js"></script>
+  <script src="app/js/views/climbEntry.js"></script>
   <script src="app/js/views/app.js"></script>
-  <script src="app/js/scripts.js"></script>
+  <script src="app/js/lib/util.js"></script>
 
 </body>
 

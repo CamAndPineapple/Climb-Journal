@@ -7,7 +7,7 @@ var ClimbView = Backbone.View.extend({
 
   tagName:  "div",
   className: "climbContainer",
-  template: _.template( $('#climbTemplate').html() ),
+  template: _.template( $('#climbEntryTemplate').html() ),
 
   events: {
       'click .delete': 'deleteClimb'

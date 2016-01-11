@@ -4,6 +4,6 @@
 
 // Create collection and link to firebase endpoint
 var ClimbCollection = Backbone.Firebase.Collection.extend({
-  model: Climb,
+  model: ClimbEntry,
   url: "https://climb-journal.firebaseIO.com"
 });

@@ -2,7 +2,7 @@
   MODEL
 *********/
 
-var Climb = Backbone.Model.extend({
+var ClimbEntry = Backbone.Model.extend({
   defaults: {
     Type: "Lead",
     Name: "Route Name",
