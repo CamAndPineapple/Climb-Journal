@@ -14,8 +14,9 @@ var ClimbView = Backbone.View.extend({
   },
 
   deleteClimb: function() {
-    // Destroy model and remove view from page
-    this.model.destroy
+
+    // Destroy Model and remove view from page
+    this.model.destroy();
     this.remove();
 
   },

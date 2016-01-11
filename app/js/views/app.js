@@ -4,7 +4,7 @@ var AppView = Backbone.View.extend({
   el: '#app',
 
   events: {
-    'click #add': 'addNewClimb'
+    'click #add': 'addNewClimb',
   },
 
   initialize: function() {
@@ -18,16 +18,20 @@ var AppView = Backbone.View.extend({
 
     var formData = {};
 
-    $('#addClimb div').children('input').each(function(i, el) {
+    $('.type-button-container').children().each(function(i, el) {
+      if($(el).attr('id') === 'selected') {
+        formData['Type'] = $(el).html();
+      }
+    });
+
+    $('.form-input').children('input').each(function(i, el) {
       if ($(el).val() != '') {
         formData[el.id] = $(el).val();
       }
     });
-
+    console.log(formData);
     this.collection.create(formData);
   },
-
-
 
   render: function() {
     this.collection.each(function(item) {
@@ -41,7 +45,7 @@ var AppView = Backbone.View.extend({
     var climbView = new ClimbView({
       model: item
     });
-    this.$el.append(climbView.render().el);
+    $('#model-container').append(climbView.render().el);
   },
 
 });

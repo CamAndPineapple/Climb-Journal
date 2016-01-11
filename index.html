@@ -12,24 +12,33 @@
 
   <!-- FORM FOR ADDING NEW CLIMB -->
   <div id="app">
+    <div class="form-container">
     <form id="addClimb" action="#">
-        <div>
-            <label for="Type">Type: </label><input id="Type" type="text" />
-            <label for="Grade">Grade: </label><input id="Grade" type="text" />
-            <label for="Name">Name: </label><input id="Name" type="text" />
-            <label for="Location">Location: </label><input id="Location" type="text" />
+            <div class="type-button-container">
+              <button class="type-button" id="lead">Lead</button>
+              <button class="type-button" id="TopRope">Top Rope</button>
+              <button class="type-button" id="Boulder">Boulder</button>
+            </div>
+            <span class="form-input"><label for="Grade">Grade: </label><input id="Grade" type="text" /></span>
+            <span class="form-input"><label for="Name">Name: </label><input id="Name" type="text" /></span>
+            <span class="form-input"><label for="Date">Date: </label><input id="Date" type="date" /></span>
+            <span class="form-input"><label for="Location">Location: </label><input id="Location" type="text" /></span>
             <button id="add">Add</button>
-        </div>
     </form>
+  </div>
+  <div id="model-container">
+
+  </div>
 </div>
 
   <!-- TEMPLATES -->
 <script id="climbTemplate" type="text/template">
     <ul>
-        <li><%= Type %></li>
-        <li><%= Grade %></li>
-        <li><%= Name %></li>
-        <li><%= Location %></li>
+        <li><span>Type: </span><%= Type %></li>
+        <li><span>Grade: </span><%= Grade %></li>
+        <li><span>Route Name: </span><%= Name %></li>
+        <li><span>Date: </span><%= Date %></li>
+        <li><span>Location: </span><%= Location %></li>
     </ul>
 
     <button class="delete">Delete</button>
@@ -47,6 +56,7 @@
   <script src="app/js/collections/journal.js"></script>
   <script src="app/js/views/climb.js"></script>
   <script src="app/js/views/app.js"></script>
+  <script src="app/js/scripts.js"></script>
 
 </body>
 
