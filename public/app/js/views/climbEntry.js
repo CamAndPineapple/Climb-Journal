@@ -6,7 +6,7 @@ CLIMB VIEW
 var ClimbView = Backbone.View.extend({
 
   tagName:  "div",
-  className: "climbContainer",
+  className: "climbEntryContainer",
   template: _.template( $('#climbEntryTemplate').html() ),
 
   events: {
@@ -20,7 +20,6 @@ var ClimbView = Backbone.View.extend({
     this.remove();
 
   },
-
 
   initialize: function() {
     this.listenTo(this.model, "change", this.render);

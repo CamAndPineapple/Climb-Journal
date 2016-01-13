@@ -1,0 +1,166 @@
+/* --------------------------------------------
+Custom CSS for Climb Journal App
+Author:		Camden Rudisill
+----------------------------------------------- */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+  color: #fff;
+}
+
+/* ------------------------
+   	Header
+--------------------------*/
+
+.header {
+  background-color: #051835;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 3px;
+}
+
+/* ------------------------
+   	App Container
+--------------------------*/
+
+#app {
+  display: flex;
+  color: #fff;
+}
+
+/* ------------------------
+    Form and Components
+--------------------------*/
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  background-image: linear-gradient(rgb(31, 40, 76) 0%, rgb(25, 21, 32) 100%);
+}
+.form-input-container {
+  margin-top: 20px;
+}
+#addClimbForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #203557;
+  width: 400px;
+  height: 375px;
+  margin-top: 55px;
+}
+.form-input {
+  margin: 1px;
+  height: 46px;
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #242852;
+  color: #575B86;
+  padding: 24px;
+}
+.form-input input {
+  width: 225px;
+  border: 0px;
+  height: 27px;
+  font-size: 15px;
+  background-color: #242852;
+  color: #d0cdfa;
+}
+.type-button-container {
+  padding-top: 20px;
+}
+.type-button {
+  margin: 2px;
+  border: 0px;
+  height: 50px;
+  width: 111px;
+  font-size: 13px;
+  background-color: #4D94F4;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.type-button:hover {
+  background-color: #3978CE;
+}
+.type-button:focus {
+  outline: none;
+}
+#selected {
+  background-color: #B57070;
+  border: 0px;
+}
+
+.btn {
+  height: 50px;
+  width: 348px;
+  background-color: #13C1BF;
+  border: 0px;
+  color: #fff;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #B57070;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+/* ------------------------
+    Models
+--------------------------*/
+
+#model-container {
+  display: flex;
+  padding-top: 50px;
+  width: 50%;
+  height: 100vh;
+  flex-direction: column;
+  background-color: #DAE1E5;
+  align-items: center;
+  overflow: scroll;
+}
+.climbEntryContainer {
+  outline: 1px solid #aaa;
+  width: 350px;
+  background-color: #fff;
+  margin: 5px;
+  border-top: 5px solid #4D94F4;
+  color: #000;
+}
+
+::-webkit-input-placeholder {
+ font-size: 15px;
+ color: rgba(255, 255, 255, 0.24);
+
+}
+:-moz-placeholder { /* older Firefox*/
+ font-size:14px;
+ color: rgba(255, 255, 255, 0.24);
+
+}
+::-moz-placeholder { /* Firefox 19+ */
+ font-size: 14px;
+ color: rgba(255, 255, 255, 0.24);
+
+}
+:-ms-input-placeholder {
+ font-size: 14px;
+ color: rgba(255, 255, 255, 0.24);
+
+}

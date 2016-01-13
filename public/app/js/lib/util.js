@@ -1,3 +1,8 @@
+/*******************
+  UTILITY FUNCTIONS
+********************/
+
+
 (function() {
 
   // GOOGLE PLACES AUTOCOMPLETE API
@@ -12,7 +17,8 @@
 
   // TYPE BUTTON SELECTOR
 
-  $('.type-button').click(function() {
+  $('.type-button').click(function(e) {
+    e.preventDefault();
     $(this).siblings().removeAttr('id');
     $(this).attr('id', 'selected');
 
