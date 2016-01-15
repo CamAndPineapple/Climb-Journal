@@ -2,12 +2,15 @@
   MODEL
 *********/
 
+
+
 var ClimbEntry = Backbone.Model.extend({
+
   defaults: {
     Type: "Lead",
-    Name: "Route Name",
-    Grade: "5.10",
-    Date: new Date().getFullYear(),
+    Name: "Unknown",
+    Grade: "5.12c",
+    Date: date,
     Location: "Unknown"
   }
 });

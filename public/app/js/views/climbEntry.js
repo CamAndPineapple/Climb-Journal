@@ -5,20 +5,23 @@ CLIMB VIEW
 
 var ClimbView = Backbone.View.extend({
 
-  tagName:  "div",
+  tagName: "div",
   className: "climbEntryContainer",
-  template: _.template( $('#climbEntryTemplate').html() ),
+  template: _.template($('#climbEntryTemplate').html()),
 
   events: {
-      'click .delete': 'deleteClimb'
+    'click .delete': 'deleteClimb'
   },
 
   deleteClimb: function() {
 
-    // Destroy Model and remove view from page
-    this.model.destroy();
-    this.remove();
+    var confirmDelete = confirm("are you sure you want to delete this climb?");
 
+    if (confirmDelete) {
+      // Destroy Model and remove view from page
+      this.model.destroy();
+      this.remove();
+    }
   },
 
   initialize: function() {

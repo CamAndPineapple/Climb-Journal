@@ -2,8 +2,20 @@
   UTILITY FUNCTIONS
 ********************/
 
+// CURRENT DATE
+
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth() + 1; //January is 0!
+var yyyy = today.getFullYear();
+
+var date = mm+'/'+dd+'/'+yyyy;
+
+$(".model-container").hide();
 
 (function() {
+
+  $('#about').hide();
 
   // GOOGLE PLACES AUTOCOMPLETE API
 
