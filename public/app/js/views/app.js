@@ -15,10 +15,12 @@ var AppView = Backbone.View.extend({
     this.collection = new ClimbCollection();
     this.render();
     this.listenTo(this.collection, 'add', this.renderClimb);
+
   },
 
 
   addNewClimb: function(e) {
+
     e.preventDefault();
 
     var formData = {};
@@ -39,10 +41,17 @@ var AppView = Backbone.View.extend({
 
     // Create collection using formData for each model
     this.collection.create(formData);
+
+    // Make sure formData was created with it's own id
+    // Then show show successfully added notification
+    if (formData.hasOwnProperty('id')) {
+      $(".add-notification").fadeIn("slow").fadeOut("slow");
+    }
   },
 
   // Call renderClimb() on each item in collection
   render: function() {
+
     this.collection.each(function(item) {
       this.renderClimb(item);
     }, this);

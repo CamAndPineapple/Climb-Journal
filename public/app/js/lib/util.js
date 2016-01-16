@@ -16,6 +16,7 @@ var today = new Date(),
 
   // Initial View
   $(".model-container").hide();
+  $(".add-notification").hide();
 
   // GOOGLE PLACES AUTOCOMPLETE API
   function initialize() {
