@@ -1,3 +1,7 @@
+/*********
+  ROUTER 
+*********/
+
 var appRouter = Backbone.Router.extend({
 
   routes: {

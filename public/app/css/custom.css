@@ -60,7 +60,7 @@ html, body {
   align-items: center;
   justify-content: center;
   height: 50px;
-  width: 400px;
+  width: 100%;
   background-color: transparent;
   margin-bottom: 20px;
   margin-top: -60px;
@@ -274,7 +274,11 @@ html, body {
   #app {
     flex-direction: column;
   }
+  #addClimbForm {
+    width: 100%;
+  }
   .climbEntryContainer {
+    height: 125px;
     width: 90%;
   }
   .notification-container {
