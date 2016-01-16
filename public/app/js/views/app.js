@@ -17,6 +17,7 @@ var AppView = Backbone.View.extend({
     this.listenTo(this.collection, 'add', this.renderClimb);
   },
 
+
   addNewClimb: function(e) {
     e.preventDefault();
 

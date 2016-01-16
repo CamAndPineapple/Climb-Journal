@@ -8,8 +8,14 @@
   <title>Climb Journal</title>
   <link rel="stylesheet" href="app/css/custom.css">
 
+  <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <!-- Places Autocomplete API -->
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+
 </head>
 
 <body>
@@ -25,7 +31,7 @@
       <form id="addClimbForm" action="#">
         <h1>Pick a climbing type:</h1>
         <div class="type-button-container">
-          <button class="type-button">Lead</button>
+          <button class="type-button" id="selected">Lead</button>
           <button class="type-button">Top Rope</button>
           <button class="type-button">Boulder</button>
         </div>
@@ -72,8 +78,8 @@
         <ul>
           <li><span class="route-info-text">Type: </span><%= Type %></li>
           <li><span class="route-info-text">Name: </span><%= Name %></li>
-          <li><span class="route-info-text">Location: </span><%= Location %></li>
-          <li><span class="route-info-text">Date: </span><%= Date %></li>
+          <li><span class="route-info-text"><i class="fa fa-map-marker"></i> </span><%= Location %></li>
+          <li><span class="route-info-text"><i class="fa fa-calendar"></i> </span><%= Date %></li>
         </ul>
     </div>
 
@@ -81,8 +87,8 @@
   </script>
 
 <div class="bottom-nav">
-    <a class="nav-link" href="#entry"><div >New Entry</div></a>
-    <a class="nav-link" href="#journal"><div >Journal</div></a>
+    <a class="nav-link" id="entry-tab" href="#entry"><div ><i class="fa fa-plus-circle"></i> Add Entry</div></a>
+    <a class="nav-link" id="journal-tab" href="#journal"><div ><i class="fa fa-book"></i> Journal</div></a>
 </div>
 
 
@@ -95,12 +101,13 @@
 
 
   <!-- App Javascript -->
-  <script src="app/js/lib/util.js"></script>
+  <script src="build/js/bundle.js"></script>
+  <!-- <script src="app/js/lib/util.js"></script>
   <script src="app/js/models/climbEntry.js"></script>
   <script src="app/js/collections/journal.js"></script>
   <script src="app/js/views/climbEntry.js"></script>
   <script src="app/js/views/app.js"></script>
-  <script src="app/js/routers/router.js"></script>
+  <script src="app/js/routers/router.js"></script> -->
 
 </body>
 

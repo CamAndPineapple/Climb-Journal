@@ -4,21 +4,20 @@
 
 // CURRENT DATE
 
-var today = new Date();
-var dd = today.getDate();
-var mm = today.getMonth() + 1; //January is 0!
-var yyyy = today.getFullYear();
+var today = new Date(),
+    dd = today.getDate(),
+    mm = today.getMonth() + 1,
+    yyyy = today.getFullYear(),
+    date = mm+'/'+dd+'/'+yyyy;
 
-var date = mm+'/'+dd+'/'+yyyy;
 
-$(".model-container").hide();
 
 (function() {
 
-  $('#about').hide();
+  // Initial View
+  $(".model-container").hide();
 
   // GOOGLE PLACES AUTOCOMPLETE API
-
   function initialize() {
 
     var input = document.getElementById('Location');
@@ -35,5 +34,6 @@ $(".model-container").hide();
     $(this).attr('id', 'selected');
 
   });
+
 
 }());

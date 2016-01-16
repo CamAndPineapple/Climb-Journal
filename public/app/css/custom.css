@@ -9,7 +9,7 @@ html, body {
   width: 100%;
   margin: 0px;
   padding: 0px;
-  font-family: sans-serif;
+  font-family: 'Work Sans', sans-serif;
   color: #fff;
 
 }
@@ -48,6 +48,7 @@ html, body {
 .form-container {
   display: flex;
   justify-content: center;
+  height: 100%;
   width: 100%;
   background-image: linear-gradient(rgb(31, 40, 76) 0%, rgb(25, 21, 32) 100%);
 }
@@ -220,6 +221,10 @@ transition: all 0.3s ease;
   background-color: #4D94F4;
 }
 
+.nav-link-active {
+  background-color: #4D94F4;
+}
+
 
 /* ------------------------
     Placeholder polyfills
@@ -252,6 +257,10 @@ transition: all 0.3s ease;
 
   #app {
     flex-direction: column;
+  }
+
+  .climbEntryContainer {
+    width: 90%;
   }
 
 
